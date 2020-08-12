@@ -1,28 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
-const workers = [
-  "D’Marcus Williums",
-  "T.J. Juckson", 
-  "T’Variuness King",
-  "Tyroil Smoochie-Wallace",
-  "D’Squarius Green, Jr.",
-  "Ibrahim Moizoos",
-  "Jackmerius Tacktheratrix",
-  "D’Isiah T. Billings-Clyde",
-  "D’Jasper Probincrux III",
-  "Leoz Maxwell Jilliumz",
-  "Javaris Jamar Javarison-Lamar",
-  "Davoin Shower-Handel",
-  "Hingle McCringleberry",
-  "L’Carpetron Dookmarriot",
-  "J’Dinkalage Morgoone",
-  "Xmus Jaxon Flaxon-Waxon",
-]
 
 
 ReactDOM.render(

@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect} from 'react';
 import './App.css';
+import Form from './Form'
+import FormList from './FormList'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    const [members, setMembers] = useState([{
+      memberName: 'Hingle McCringleberry',
+      email: 'HingleMcCringleberry@gmail.com',
+      role: 'Designer'
+    },
+    {
+      memberName: 'Tyroil Smoochie-Wallace',
+      email: 'TyroilSmoochie-Wallace@gmail.com',
+      role: 'Front End'
+    },
+    {
+      memberName: 'Ibrahim Moizoos',
+      email: 'IbrahimMoizoos@gmail.com',
+      role: 'Back End'
+    },
+    {
+      memberName: 'Javaris Jamar Javarison-Lamar',
+      email: 'JavarisJamarJavarison-Lamar@gmail.com',
+      role: 'Architect'
+    },
+    {
+      memberName: 'Hingle McCringleberry',
+      email: 'HingleMcCringleberry@gmail.com',
+      role: 'Designer'
+    }
+    ])
+  
+  
+  
+    return (
+      <div className="App">
+        <h1>Add Team Member</h1>
+        <Form members={members} setMembers={setMembers} />
+        <FormList members={members} />
+  
+      </div>
+    );
+  }
+
 
 export default App;
